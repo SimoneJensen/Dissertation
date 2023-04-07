@@ -60,10 +60,6 @@ def SIRrun(g, beta, mu):
         Slen = []
         Rlen = []
         
-        #dictionary. Don't know what it's doing
-        # sentinels_t = {}
-        # for sen in sentinels:
-        #     sentinels_t[sen] = 0
         
         #keep infecting until there are no people who are infected
         while len(I_set) > 0:
@@ -83,10 +79,6 @@ def SIRrun(g, beta, mu):
                         #adding tnode s since it's been conversted from S to I
                         StoI.add(s)
                         
-                        
-                        # Record t for sentinels
-                        # if sentinels_t.get(s) != None:
-                        #     sentinels_t[s] = t
                         
                 # Will infected person recover?
                 if np.random.uniform() < mu:
